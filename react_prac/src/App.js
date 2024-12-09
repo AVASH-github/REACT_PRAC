@@ -1,9 +1,9 @@
-import Board from "./tic-tac-toe";
+import Game from "./tic-tac-toe";
 function App() {
   return (
     <>
     
-   <Board />
+ <Game />
     
     </>
   );
