@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+.square {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  margin: 5px; /* Space between buttons */
+  font-size: 24px; /* Font size for the text */
+  font-weight: bold; /* Bold text */
+  color: #333; /* Text color */
+  text-align: center; /* Center the text */
+  background-color: #f9f9f9; /* Light gray background */
+  border: 2px solid #ccc; /* Solid border */
+  border-radius: 5px; /* Optional: Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  outline: none; /* Remove default focus outline */
+  display: inline-block; /* Prevent layout issues */
+  box-sizing: border-box; /* Include padding and border in dimensions */
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth interaction effects */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.square:focus {
+  outline: none; /* Remove the browser's focus outline */
 }
+
+.square:active {
+  background-color: #ddd; /* Change background color on click */
+  transform: scale(0.98); /* Slight shrinking effect */
+  border-color: #bbb; /* Optional: Change border color on click */
+}
+
+
+
+
