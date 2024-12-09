@@ -1,16 +1,16 @@
+import React from "react";
+function ButtonClick(){
 function handleClick(){
-    alert("you clicked me");
-
-
+    alert("You clicked me");
+}
 return(
 
 <>
 <button onClick={handleClick}>
 Click me 
-
 </button>
 </>
 
 );
 }
-export default handleClick;
+export default ButtonClick;
