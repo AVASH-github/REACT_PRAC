@@ -1,33 +1,45 @@
-
-
+/* General button styles for the square */
 .square {
-  width: 100px; /* Fixed width */
+  width: 100px; /* Fixed width for consistency */
   height: 100px; /* Fixed height */
   margin: 5px; /* Space between buttons */
   font-size: 24px; /* Font size for the text */
-  font-weight: bold; /* Bold text */
+  font-weight: bold; /* Bold text for clarity */
   color: #333; /* Text color */
-  text-align: center; /* Center the text */
   background-color: #f9f9f9; /* Light gray background */
   border: 2px solid #ccc; /* Solid border */
-  border-radius: 5px; /* Optional: Rounded corners */
+  border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   outline: none; /* Remove default focus outline */
-  display: inline-block; /* Prevent layout issues */
+  display: inline-flex; /* Align content horizontally and vertically */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
   box-sizing: border-box; /* Include padding and border in dimensions */
-  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth interaction effects */
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth interactions */
 }
 
+/* Highlight the square when hovered */
+.square:hover {
+  background-color: #e6e6e6; /* Slightly darker background on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Change appearance on focus (when clicked or tabbed) */
 .square:focus {
-  outline: none; /* Remove the browser's focus outline */
+  outline: none; /* Remove focus outline */
+  background-color: #ddd; /* Slightly darker background */
 }
 
-.square:active {
-  background-color: #ddd; /* Change background color on click */
-  transform: scale(0.98); /* Slight shrinking effect */
-  border-color: #bbb; /* Optional: Change border color on click */
+/* Specific styles for winning squares (if needed) */
+.square.winning-square {
+  background-color: #90ee90; /* Light green background for winning squares */
+  color: #000; /* Darker text for contrast */
+  border-color: #76c776; /* Matching border color */
 }
 
-
-
-
+/* Row styles to align the squares */
+.board-row {
+  display: flex; /* Align squares in a row */
+  justify-content: center; /* Center the row */
+  margin-bottom: 10px; /* Add spacing between rows */
+}
