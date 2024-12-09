@@ -1,16 +1,16 @@
 import React from "react";
-function ButtonClick(){
-function handleClick(){
-    alert("You clicked me");
-}
+
+
+function ButtonClick({count,onClick}){
+
+ 
 return(
-
 <>
-<button onClick={handleClick}>
-Click me 
+<button onClick={onClick}>
+Click {count}Me
 </button>
-</>
 
+</>
 );
 }
 export default ButtonClick;
