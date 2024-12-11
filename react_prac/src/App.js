@@ -2,16 +2,27 @@ import Game from "./tic-tac-toe";
 import GroceryForm from "./GroceryForm";
 import GroceryList from "./GroceryList";
 import Card from "./Card";
-
+import Input from "./Input";
+import Form from "./Form";
 
 import { useState } from "react";
 function App() {
   const [groceries,setGroceries]=useState([]);
 
-
   const addGroceries = (item) => {
     setGroceries([...groceries, item]); 
   };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [gender,setGender]=useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Name: ${name}, Email: ${email}, Password: ${password},Gender:${gender}`);
+    console.log(`Name: ${name}, Email: ${email}, Password: ${password},Gender:${gender}`);
+  };
+
 
   return (
     <>
@@ -41,6 +52,55 @@ function App() {
   
     </div>
 
+
+    <hr/>
+
+    <div style={{ textAlign: "center" }}>
+      <h1>Reusable Form and Input Components</h1>
+      <Form onSubmit={handleSubmit}>
+        <Input
+          label="Name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name"
+        />
+        <Input
+          label="Email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+        />
+        <Input
+          label="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter your password"
+        />
+        <Input
+          label="Gender"
+          type="radio"
+          value={gender}
+          options={[
+            {label:"Male",value:"male"},
+            {label:"Female",value:"female"},
+            {label:"Other",value:"other"},
+          ]}
+          onChange={(e)=>setGender(e.target.value)}
+        />
+        <button
+          type="submit"
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "blue",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+        >
+          Submit
+        </button>
+      </Form>
+    </div>
     </>
 
   
