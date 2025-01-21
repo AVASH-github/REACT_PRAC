@@ -6,10 +6,10 @@ function Form({ onSubmit, children, style }) {
     <form
       onSubmit={onSubmit}
       style={{
-        padding: "20px",
+        padding: "40px",
         border: "1px solid #ccc",
         borderRadius: "8px",
-        maxWidth: "400px",
+        maxWidth: "500px",
         margin: "20px auto",
         backgroundColor: "#f9f9f9",
         ...style,
